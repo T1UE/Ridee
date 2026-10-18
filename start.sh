@@ -1,0 +1,7 @@
+echo "Downloading Packages..."
+
+pip install -r requirements.txt
+
+clear
+
+python main.py
