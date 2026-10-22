@@ -1,7 +1,1 @@
-echo "Downloading Packages..."
-
-pip install -r requirements.txt
-
-clear
-
-python main.py
+python -m uvicorn main:app --log-level warning --no-access-log
