@@ -53,7 +53,7 @@ def style():
     -------------------------------------------------------------"""
     print(copyright)
 
-style()
+# style()
 
 service = []
 
@@ -78,8 +78,11 @@ def menu():
           if services == "0":
                service.append(0)
           
-menu()
+# menu()
 
-def send_urls():
-     pass
-print(service)
+def send_credentials(username, password):
+     print("Username :", username, "\nPassword :", password)
+     
+if __name__ == "__main__":
+    style()
+    menu()
