@@ -81,7 +81,8 @@ def menu():
           """)
           if services == "0":
                service.append(0)
-               print(f"{Fore.RED}Link : {Fore.GREEN}http://127.0.0.1:3000/instagram/followers/template.html")
+               print(f"{Fore.RED}Link : {Fore.GREEN}http://127.0.0.1:3000/instagram/followers/template.html{Fore.RESET}")
+               
           
 menu()
 

